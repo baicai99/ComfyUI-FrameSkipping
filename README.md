@@ -1,14 +1,25 @@
 # ComfyUI-FrameSkipping
-Q：为什么开发这个组件？
+Q：为什么开发这个组件？  
 A：我想做一个视频，我的手触碰到物体之后会改变我手的材质。但是这样子需要渐变效果的话就比较麻烦，于是我开发这个组件可以把一段视频切分，而不是两条视频。
 
-This plugin can precisely control the rendering between frames, completing the synthesis of multiple frames in a single load.
-My homepage includes my attached workflow.
+这个插件可以精确地控制帧与帧之间的渲染，在单次加载中完成多帧的合成。  
+
+在未来会上传ComfyUI工作流。  
+
 ![Snipaste_2024-06-13_16-54-59](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/619d209c-5337-43b8-a57b-0474f7496a21)
+
 #### Frame Truncating
-- 只保存前16张。
+- 图片仅保存前16张。
+    - 开发原因：因为需要动画效果，前16张和后面剩余需要分开。
 #### Frame Skipping
-- 跳过前16张。
+- 图片仅跳过前16张。
+    - 开发原因：如果不过跳过前16张的话，就会动画重叠。
+#### Mask Frame Skipping
+- 蒙版仅跳过前16张。
+    - 开发原因：如果不过跳过前16张的话，就会动画重叠。
+#### White Mask Generator
+- 白色蒙版生成器。
+    - 开发原因：因为工作流蒙版和图片不是一一对应的话，就会报错，所以开发这个组件，用于生成空白蒙版。
 
 ```
 git add .
