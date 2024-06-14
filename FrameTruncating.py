@@ -1,3 +1,5 @@
+# 图片第几张结束节点
+
 import torch
 import numpy as np
 
@@ -16,7 +18,7 @@ class FrameTruncating:
             }
         }
 
-    CATEGORY = "baicai"  # 定义该节点在组件库中的分类
+    CATEGORY = "baicai/picture"  # 定义该节点在组件库中的分类
 
     RETURN_TYPES = ("IMAGE",)  # 定义节点的输出类型，这里返回处理后的图片
     RETURN_NAMES = ("truncated_images",)  # 定义输出的变量名
