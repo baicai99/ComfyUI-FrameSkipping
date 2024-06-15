@@ -25,7 +25,7 @@ class IntOperationsNode:
     RETURN_NAMES = ("result",)
     FUNCTION = "execute"
     OUTPUT_NODE = True
-    CATEGORY = "Arithmetic Operations"
+    CATEGORY = "baicai/Operations"
 
     def __init__(self):
         pass
