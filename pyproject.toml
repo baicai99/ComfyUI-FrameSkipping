@@ -11,4 +11,4 @@ Repository = "https://github.com/baicai99/ComfyUI-FrameSkipping"
 [tool.comfy]
 PublisherId = "baicai99"
 DisplayName = "ComfyUI-FrameSkipping"
-Icon = "./icon.png"
+Icon = ""
