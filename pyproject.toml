@@ -9,6 +9,6 @@ Repository = "https://github.com/baicai99/ComfyUI-FrameSkipping"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "baicai99"
 DisplayName = "ComfyUI-FrameSkipping"
 Icon = ""
