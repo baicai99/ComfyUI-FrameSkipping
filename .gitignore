@@ -1,0 +1,24 @@
+# 忽略编译后的文件
+*.pyc
+
+# 忽略临时文件
+*.tmp
+*~
+
+# 忽略虚拟环境
+venv/
+.env/
+
+# 忽略node_modules
+node_modules/
+
+# 忽略压缩文件
+*.zip
+
+# 忽略IDE配置文件
+.vscode/
+.idea/
+
+# 忽略其他不需要的文件或文件夹
+__pycache__/
+.DS_Store
