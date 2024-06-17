@@ -22,3 +22,17 @@ node_modules/
 # 忽略其他不需要的文件或文件夹
 __pycache__/
 .DS_Store
+
+# 忽略日志文件
+*.log
+
+# 忽略覆盖率报告
+htmlcov/
+.coverage
+coverage.xml
+
+# 忽略Jupyter Notebook检查点
+.ipynb_checkpoints/
+
+# 忽略特定工具生成的文件
+.tox/
