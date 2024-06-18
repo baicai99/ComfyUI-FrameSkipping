@@ -33,10 +33,10 @@ class FrameSelector:
             },
         }
 
-    RETURN_TYPES = ("IMAGE",)
-    RETURN_NAMES = ("selected_images",)
+    RETURN_TYPES = ("IMAGE", "INT")
+    RETURN_NAMES = ("selected_images", "num_frames")
 
-    FUNCTION = "baicai/"
+    FUNCTION = "select_frames"
 
     CATEGORY = "Frame Tools"
 
@@ -48,10 +48,12 @@ class FrameSelector:
 
         if start_frame >= total_frames or adjusted_end_frame >= total_frames or start_frame < 0 or adjusted_end_frame < 0:
             selected_images = torch.empty((0, *images.shape[1:]), dtype=images.dtype)
+            num_frames = 0
         else:
             selected_images = images[start_frame:adjusted_end_frame, :, :, :]
+            num_frames = selected_images.shape[0]
 
-        return (selected_images,)
+        return (selected_images, num_frames)
 
     @classmethod
     def IS_CHANGED(cls, start_frame, end_frame, addition_value):
