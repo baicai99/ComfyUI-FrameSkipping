@@ -1,6 +1,6 @@
 import torch
 
-class WhiteMaskGenerator:
+class MaskGenerator:
 
     def __init__(self):
         """
@@ -40,6 +40,7 @@ class WhiteMaskGenerator:
                     "step": 1,
                     "display": "number"
                 }),
+                "mask_color": (["white", "black"],),
             },
         }
 
@@ -47,7 +48,7 @@ class WhiteMaskGenerator:
     FUNCTION = "execute"  # 执行的主要函数
     CATEGORY = "baicai/mask"  # 此节点在UI中出现的类别
 
-    def execute(self, num_masks, mask_height, mask_width):
+    def execute(self, num_masks, mask_height, mask_width, mask_color):
         """
         执行节点的主要功能：创建指定数量的白色蒙版。
 
@@ -63,18 +64,12 @@ class WhiteMaskGenerator:
         返回
         ----
         tuple
-            包含生成的白色蒙版张量的元组。
+            包含生成的蒙版张量的元组。
         """
-        # 创建指定数量的白色蒙版
-        masks = torch.ones((num_masks, mask_height, mask_width), dtype=torch.float32)
+        # 根据颜色参数创建蒙版
+        if mask_color == "black":
+            masks = torch.zeros((num_masks, mask_height, mask_width), dtype=torch.float32)
+        else:  # 默认为白色蒙版
+            masks = torch.ones((num_masks, mask_height, mask_width), dtype=torch.float32)
         
         return (masks,)
-
-# 定义节点类映射和显示名称映射，以便与框架集成
-MASK_CLASS_MAPPINGS = {
-    "WhiteMaskGenerator": WhiteMaskGenerator
-}
-
-MASK_NAME_MAPPINGS = {
-    "WhiteMaskGenerator": "White Mask Generator"
-}
