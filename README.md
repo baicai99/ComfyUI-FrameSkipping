@@ -1,5 +1,7 @@
 # ComfyUI-FrameSkipping Component Introduction
 
+[中文](README.zh.md) | [ENGLISH](README.md)
+
 ## Question: Why was this component developed?
 Answer: The primary motivation for developing this component was to create a video where the texture of a hand changes upon touching an object. To achieve this gradient effect, I developed this component to allow for precise splitting of a video, rather than simply dividing it into two segments.
 
