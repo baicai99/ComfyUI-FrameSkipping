@@ -47,7 +47,7 @@ class MaskSelector:
 
     RETURN_TYPES = ("MASK",)  # 输出的类型，将是一个蒙版的张量
     FUNCTION = "select_masks"  # 执行的主要函数
-    CATEGORY = "baicai/mask"  # 此节点在UI中出现的类别
+    CATEGORY = "baicai"  # 此节点在UI中出现的类别
 
     def select_masks(self, masks, start_frame, end_frame, addition_value):
         """
