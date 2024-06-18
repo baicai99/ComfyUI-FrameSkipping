@@ -48,11 +48,12 @@ class IntOperationsNode:
             },
         }
 
-    def execute(self, operand1, operand2, operation):
+    def execute(self, num1, num2, operation):
         if operation == "add":
-            result = operand1 + operand2
+            result = num1 + num2
         elif operation == "subtract":
-            result = operand1 - operand2
+            result = num1 - num2
         else:
             raise ValueError("Unsupported operation")
         return (result,)
+
