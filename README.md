@@ -9,11 +9,11 @@
 
 未来将上传ComfyUI工作流。
 
-![Snipaste_2024-06-13_16-54-59](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/619d209c-5337-43b8-a57b-0474f7496a21)
-
-![Snipaste_2024-06-14_16-41-39](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/030c30c3-132b-4741-b388-9406abc9c1a7)
-
 ## 已开发功能
+### Frame Selector
+- 帧数选择器，输入开始帧和结束帧得到中间帧，如果希望延续帧可以往后添加任意帧数。
+  - 开发原因：虽然之前的节点用 IntOperationsNode 也可以解决，但是太麻烦了，能用一个节点搞定就用一个节点吧。
+![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/3a36b65a-5573-4abb-9708-5422f48dd74c)
 
 ### Frame Truncating
 - 仅保留前 n 张图片。
