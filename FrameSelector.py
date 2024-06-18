@@ -36,7 +36,7 @@ class FrameSelector:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("selected_images",)
 
-    FUNCTION = "select_frames"
+    FUNCTION = "baicai/"
 
     CATEGORY = "Frame Tools"
 

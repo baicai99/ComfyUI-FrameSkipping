@@ -1,48 +1,47 @@
-# ComfyUI-FrameSkipping 组件介绍
+# ComfyUI-FrameSkipping Component Introduction
 
-## 问：为什么开发这个组件？
-答：我希望制作一个视频，在手触碰到物体后手的材质会发生变化。为了实现渐变效果，我开发了这个组件，可以将一段视频进行切分，而不是将其分成两段。
+## Question: Why was this component developed?
+Answer: The primary motivation for developing this component was to create a video where the texture of a hand changes upon touching an object. To achieve this gradient effect, I developed this component to allow for precise splitting of a video, rather than simply dividing it into two segments.
 
-这个插件能够精确控制帧与帧之间的渲染，实现单次加载中多帧的合成。
+This plugin enables precise control over frame-to-frame rendering, allowing for the composition of multiple frames in a single load.
 
-节点组命名为：baicai
+The node group is named: baicai
 
-未来将上传ComfyUI工作流。
+The ComfyUI workflow will be uploaded in the future.
 
-## 已开发功能
+## Developed Features
 ### Frame Selector
-- 帧数选择器，输入开始帧和结束帧得到中间帧，如果希望延续帧可以往后添加任意帧数。
-  - 开发原因：虽然之前的节点用 IntOperationsNode 也可以解决，但是太麻烦了，能用一个节点搞定就用一个节点吧。
+- Frame Selector: By inputting the start frame and end frame, it selects the frames in between. If extension frames are needed, any number of frames can be added.
+  - Development Reason: Although similar results could be achieved with the previous node using IntOperationsNode, it was cumbersome. Therefore, a single node was developed to simplify the process.
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/3a36b65a-5573-4abb-9708-5422f48dd74c)
 
 ### Frame Truncating
-- 仅保留前 n 张图片。
-  - 开发原因：为了实现动画效果，前16张和后续图片需要分开处理。
+- Frame Truncating: Retains only the first n frames.
+  - Development Reason: To achieve the desired animation effect, the first 16 frames need to be processed separately from the subsequent frames.
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/309f9ae2-442f-4d71-b065-db3c13f967ff)
 
 ### Frame Skipping
-- 跳过前 n 张图片。
-  - 开发原因：避免动画重叠，需要跳过前16张图片。
+- Frame Skipping: Skips the first n frames.
+  - Development Reason: To avoid animation overlap, the first 16 frames need to be skipped.
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/dd925c20-3bd8-44c6-8869-35296af99c21)
 
 ### Mask Frame Skipping
-- 蒙版跳过前 n 张图片。
-  - 开发原因：避免动画重叠，需要跳过前16张蒙版。
+- Mask Frame Skipping: Skips the first n mask frames.
+  - Development Reason: To avoid animation overlap, the first 16 mask frames need to be skipped.
 
 ### Mask Generator
-- 蒙版生成器,可以任意数量，任意大小的生成白色 & 黑色 蒙版。
-  - 开发原因：如果工作流中的蒙版与图片不一一对应，会导致报错，因此开发了这个组件用于生成空白蒙版。
+- Mask Generator: Generates masks of any quantity and size, in white and black.
+  - Development Reason: To prevent errors caused by masks not corresponding one-to-one with images in the workflow, this component was developed to generate blank masks.
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/80df546b-1497-4316-8bc7-819ddc50a37c)
 
 ### IntOperationsNode
-- 定义了一个执行基本整数算术操作的节点类，支持加法和减法运算。
+- IntOperationsNode: Defines a node class that performs basic integer arithmetic operations, supporting addition and subtraction.
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/1515c260-4e9c-43f0-9198-8c5ef9962cee)
 
-## 待开发功能
-- 帧数选择器：通过输入开始帧和结束帧来获取视频中的中间帧，并可以向前或向后添加帧。
-- 蒙版编辑器：1.中间黑，外面白。2，从上到下黑。
+## Features to be Developed
+- Mask Editor: 1. Black in the middle, white outside. 2. Black from top to bottom.
 
-```git
+```bash
 git add .
 git commit -m "update"
 git push
