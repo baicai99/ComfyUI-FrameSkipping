@@ -5,6 +5,7 @@ from .MaskFrameSkipping import MaskFrameSkipping
 from .MaskGenerator import MaskGenerator
 from .IntOperationsNode import IntOperationsNode
 from .FrameSelector import FrameSelector
+from .MaskSelector import MaskSelector
 
 NODE_CLASS_MAPPINGS = {
     "FrameSkipping": FrameSkipping,
@@ -13,6 +14,7 @@ NODE_CLASS_MAPPINGS = {
     "MaskGenerator": MaskGenerator,
     "IntOperationsNode": IntOperationsNode,
     "FrameSelector": FrameSelector,
+    "MaskSelector": MaskSelector,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -22,6 +24,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MaskGenerator": "Mask Generator",
     "IntOperationsNode": "Int Operations",
     "FrameSelector": "Frame Selector",
+    "MaskSelector": "Mask Selector",
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']

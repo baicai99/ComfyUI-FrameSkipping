@@ -17,6 +17,11 @@ The ComfyUI workflow will be uploaded in the future.
   - Development Reason: Although similar results could be achieved with the previous node using IntOperationsNode, it was cumbersome. Therefore, a single node was developed to simplify the process.
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/3a36b65a-5573-4abb-9708-5422f48dd74c)
 
+### Mask Selector
+- **Mask Frame Selector**: Obtain intermediate frames by inputting the start and end frames. Additional frames can be added if continuation is needed.
+  - **Reason for Development**: The mask and image need to be synchronized to avoid errors.
+![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/9f79fbd4-77d2-46ea-9de7-0c1291ed1276)
+
 ### Frame Truncating
 - Frame Truncating: Retains only the first n frames.
   - Development Reason: To achieve the desired animation effect, the first 16 frames need to be processed separately from the subsequent frames.

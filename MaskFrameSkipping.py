@@ -65,12 +65,3 @@ class MaskFrameSkipping:
         
         # 将处理后的蒙版重新堆叠成一个张量
         return (torch.stack(processed_masks),)
-
-# 定义节点类映射和显示名称映射，以便与框架集成
-MASK_CLASS_MAPPINGS = {
-    "MaskFrameSkipping": MaskFrameSkipping
-}
-
-MASK_NAME_MAPPINGS = {
-    "MaskFrameSkipping": "Mask Frame Skipping Node"
-}

@@ -17,6 +17,11 @@
   - 开发原因：虽然之前的节点可以使用 IntOperationsNode 来实现相似效果，但操作较为繁琐，因此开发了此节点以简化操作。
 ![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/3a36b65a-5573-4abb-9708-5422f48dd74c)
 
+### Mask Selector
+- 蒙版帧选择器：通过输入开始帧和结束帧来获取中间帧，如果需要延续帧，可以往后添加任意帧数。
+  - 开发原因：蒙版和图片需要同步，不然会报错。
+![image](https://github.com/baicai99/ComfyUI-FrameSkipping/assets/101706274/9f79fbd4-77d2-46ea-9de7-0c1291ed1276)
+
 ### Frame Truncating
 - 帧截取：仅保留前 n 张图片。
   - 开发原因：为了实现动画效果，前16张和后续图片需要分别处理。
