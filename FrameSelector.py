@@ -38,7 +38,7 @@ class FrameSelector:
 
     FUNCTION = "select_frames"
 
-    CATEGORY = "Frame Tools"
+    CATEGORY = "baicai"
 
     def select_frames(self, start_frame, end_frame, images, addition_value):
         total_frames = images.shape[0]
