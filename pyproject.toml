@@ -2,7 +2,7 @@
 name = "comfyui-frameskipping"
 description = "Used to process video redrawing, frame skipping, frame ending early, etc."
 version = "1.0.3"
-license = "LICENSE"
+license = { file = "LICENSE" }
 
 [project.urls]
 Repository = "https://github.com/baicai99/ComfyUI-FrameSkipping"
